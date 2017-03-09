@@ -1,0 +1,8 @@
+DELETE
+FROM member4;
+
+DELETE 
+FROM title4;
+
+DELETE 
+FROM book4;

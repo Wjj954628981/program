@@ -1,0 +1,9 @@
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\bin\MeetingModel.dll.config
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\bin\MeetingModel.dll
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\bin\MeetingModel.pdb
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\obj\Debug\MeetingModel.dll
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\obj\Debug\MeetingModel.pdb
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\bin\EntityFramework.dll
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\bin\EntityFramework.SqlServer.dll
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\bin\EntityFramework.xml
+D:\编程\数据库\课程设计\meeting\meeting\MeetingModel\bin\EntityFramework.SqlServer.xml

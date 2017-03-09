@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Frame Test</title>
+<script language="javascript" type="text/javascript">
+function FillFrame(framename){
+	//Find the object for the frame
+	theframe=parent[framename];
+	//Open and clear the frame's document
+	theframe.document.open();
+	//Create some output
+	theframe.document.write("<h1>Javascript Output</h1>");
+	theframe.document.write("<p>This text is in the ");
+	theframe.document.write(framename+"frame.</p>");
+}
+</script>
+</head>
+
+<body>
+<h1>Frame Test</h1>
+<form name="form1">
+<input type="button" value="Top right" onClick="FillFrame('top_right');">
+<input type="button" value="Bottom left" onClick="FillFrame('bottom_left');">
+<input type="button" id="js" value="Bottom right" onClick="FillFrame('bottom_right');">
+</form>
+</body>
+</html>

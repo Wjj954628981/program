@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="acompany_retinue">
+    <Key>
+      <PropertyRef Name="users_id" />
+      <PropertyRef Name="m_id" />
+      <PropertyRef Name="re_id" />
+    </Key>
+    <Property Name="users_id" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="m_id" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="re_id" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="roomnumber" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="dept_id" Type="varchar" MaxLength="7" />
+  </EntityType>
+  <EntityType Name="Departments">
+    <Key>
+      <PropertyRef Name="dept_id" />
+    </Key>
+    <Property Name="dept_id" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="dept_name" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Hotels">
+    <Key>
+      <PropertyRef Name="h_name" />
+    </Key>
+    <Property Name="h_name" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="h_address" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="phone_number" Type="varchar" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="Meetings">
+    <Key>
+      <PropertyRef Name="m_id" />
+    </Key>
+    <Property Name="m_id" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="m_name" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="pre_num" Type="int" />
+    <Property Name="max_num" Type="int" />
+    <Property Name="theme" Type="varchar" MaxLength="30" />
+    <Property Name="begin_date" Type="datetime" Nullable="false" />
+    <Property Name="end_date" Type="datetime" />
+    <Property Name="m_city" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="m_address" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="h_name" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="Ordusers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="18" Nullable="false" />
+  </EntityType>
+  <EntityType Name="P_attend_m">
+    <Key>
+      <PropertyRef Name="users_id" />
+      <PropertyRef Name="m_id" />
+    </Key>
+    <Property Name="users_id" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="m_id" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="arrive_date" Type="date" />
+    <Property Name="arrive_way" Type="varchar" MaxLength="6" />
+    <Property Name="leave_date" Type="date" />
+    <Property Name="leave_way" Type="varchar" MaxLength="6" />
+    <Property Name="room_number" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="Persons">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="20" />
+    <Property Name="gender" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Supadmin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="18" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="varchar" MaxLength="18" Nullable="false" />
+    <Property Name="psw" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="e_mail" Type="varchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__acompany___re_id__2C3393D0">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+    <End Role="acompany_retinue" Type="Self.acompany_retinue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="acompany_retinue">
+        <PropertyRef Name="re_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__acompany_retinue__2B3F6F97">
+    <End Role="P_attend_m" Type="Self.P_attend_m" Multiplicity="1" />
+    <End Role="acompany_retinue" Type="Self.acompany_retinue" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="P_attend_m">
+        <PropertyRef Name="users_id" />
+        <PropertyRef Name="m_id" />
+      </Principal>
+      <Dependent Role="acompany_retinue">
+        <PropertyRef Name="users_id" />
+        <PropertyRef Name="m_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Admins__dept_id__1CF15040">
+    <End Role="Departments" Type="Self.Departments" Multiplicity="0..1" />
+    <End Role="Admins" Type="Self.Admins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="dept_id" />
+      </Principal>
+      <Dependent Role="Admins">
+        <PropertyRef Name="dept_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Admins__id__1BFD2C07">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Admins" Type="Self.Admins" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Admins">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Meetings__h_name__24927208">
+    <End Role="Hotels" Type="Self.Hotels" Multiplicity="0..1" />
+    <End Role="Meetings" Type="Self.Meetings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotels">
+        <PropertyRef Name="h_name" />
+      </Principal>
+      <Dependent Role="Meetings">
+        <PropertyRef Name="h_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Ordusers__id__1FCDBCEB">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Ordusers" Type="Self.Ordusers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Ordusers">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__P_attend___users__276EDEB3">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="P_attend_m" Type="Self.P_attend_m" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="P_attend_m">
+        <PropertyRef Name="users_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__P_attend_m__m_id__286302EC">
+    <End Role="Meetings" Type="Self.Meetings" Multiplicity="1" />
+    <End Role="P_attend_m" Type="Self.P_attend_m" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meetings">
+        <PropertyRef Name="m_id" />
+      </Principal>
+      <Dependent Role="P_attend_m">
+        <PropertyRef Name="m_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Supadmin__id__173876EA">
+    <End Role="Users" Type="Self.Users" Multiplicity="1" />
+    <End Role="Supadmin" Type="Self.Supadmin" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Supadmin">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Users__id__145C0A3F">
+    <End Role="Persons" Type="Self.Persons" Multiplicity="1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Persons">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Model1StoreContainer">
+    <EntitySet Name="acompany_retinue" EntityType="Self.acompany_retinue" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Departments" EntityType="Self.Departments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hotels" EntityType="Self.Hotels" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meetings" EntityType="Self.Meetings" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ordusers" EntityType="Self.Ordusers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="P_attend_m" EntityType="Self.P_attend_m" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Persons" EntityType="Self.Persons" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supadmin" EntityType="Self.Supadmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__acompany___re_id__2C3393D0" Association="Self.FK__acompany___re_id__2C3393D0">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="acompany_retinue" EntitySet="acompany_retinue" />
+    </AssociationSet>
+    <AssociationSet Name="FK__acompany_retinue__2B3F6F97" Association="Self.FK__acompany_retinue__2B3F6F97">
+      <End Role="P_attend_m" EntitySet="P_attend_m" />
+      <End Role="acompany_retinue" EntitySet="acompany_retinue" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Admins__dept_id__1CF15040" Association="Self.FK__Admins__dept_id__1CF15040">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Admins" EntitySet="Admins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Admins__id__1BFD2C07" Association="Self.FK__Admins__id__1BFD2C07">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Admins" EntitySet="Admins" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Meetings__h_name__24927208" Association="Self.FK__Meetings__h_name__24927208">
+      <End Role="Hotels" EntitySet="Hotels" />
+      <End Role="Meetings" EntitySet="Meetings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Ordusers__id__1FCDBCEB" Association="Self.FK__Ordusers__id__1FCDBCEB">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Ordusers" EntitySet="Ordusers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__P_attend___users__276EDEB3" Association="Self.FK__P_attend___users__276EDEB3">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="P_attend_m" EntitySet="P_attend_m" />
+    </AssociationSet>
+    <AssociationSet Name="FK__P_attend_m__m_id__286302EC" Association="Self.FK__P_attend_m__m_id__286302EC">
+      <End Role="Meetings" EntitySet="Meetings" />
+      <End Role="P_attend_m" EntitySet="P_attend_m" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Supadmin__id__173876EA" Association="Self.FK__Supadmin__id__173876EA">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="Supadmin" EntitySet="Supadmin" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Users__id__145C0A3F" Association="Self.FK__Users__id__145C0A3F">
+      <End Role="Persons" EntitySet="Persons" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

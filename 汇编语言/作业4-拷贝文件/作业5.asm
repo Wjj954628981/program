@@ -1,0 +1,158 @@
+DATAS SEGMENT
+    TIME DB '00:00:00','$'
+    OLDVECTOR DW 0
+    OLDADD DW 0
+    COUNT DW 1
+    FIGURE DB 0
+    CHOICE DB 0
+    TIME_1 DB 0
+    TIME_2 DB 0
+    TIME_3 DB 0
+    STOP DB 0
+DATAS ENDS
+
+STACKS SEGMENT
+    ;此处输入堆栈段代码
+STACKS ENDS
+
+CODES SEGMENT
+    ASSUME CS:CODES,DS:DATAS
+START:
+    MOV AX,DATAS
+    MOV DS,AX
+    MOV ES,AX
+    CALL VECTOR 
+
+PT1:
+    MOV FIGURE,0 
+PT2:
+    MOV AH,1 
+    INT 16H
+    JZ PT3 
+    MOV AH,0 
+    INT 16h
+    CMP AH,1 
+    JZ QUIT
+    MOV AL,01
+    MOV CHOICE,AL
+    
+PT3:
+    CMP FIGURE,0
+    JZ pt2
+    CMP FIGURE,0
+    CMP CHOICE,1
+    JZ COUNTER
+    CALL CURSOR
+    CALL SHOWTIME
+    JMP  pt1
+COUNTER:
+   CLI
+   MOV CH,TIME_1
+   MOV CL,TIME_2
+   CMP CH,59
+   JBE Q
+   MOV CH,0
+   INC CL
+Q:
+   INC CH
+   MOV TIME_1,CH
+   MOV TIME_2,CL
+   MOV DI,OFFSET TIME
+   MOV AL,TIME_3
+   CALL GETTIME
+   MOV AL,TIME_2
+   CALL GETTIME
+   MOV AL,TIME_1
+   CALL GETTIME
+   CALL CURSOR
+   MOV DX,OFFSET TIME
+   MOV AH,09
+   INT 21H  
+   STI
+   JMP  PT1
+QUIT:
+    CALL RESET
+    MOV AH,4CH
+    INT 21H
+;---------------------
+DELAY:
+    STI
+    PUSH DS
+    PUSH AX
+    MOV AX,DATAS
+    MOV DS,AX
+    INC COUNT
+    CMP COUNT,18
+    JBE D2
+D1: 
+    MOV COUNT,0
+    MOV FIGURE,1
+D2:
+    POP AX
+    POP DS
+IRET
+;---------------------
+SHOWTIME:
+    MOV DI,offset TIME 
+    MOV AH,2CH
+    INT 21H
+    MOV AL,CH
+    CALL GETTIME
+    MOV AL,CL
+    CALL GETTIME
+    MOV AL,DH
+    CALL GETTIME
+    MOV DX,OFFSET TIME
+    MOV AH,09
+    INT 21H
+    RET
+;-----------------------
+GETTIME:
+    AAM
+    OR AX,3030h
+    XCHG AH,AL
+    STOSW
+    INC DI
+RET
+;-----------------------
+VECTOR: 
+    PUSH DS
+    PUSH ES
+    MOV AX,351CH
+    INT 21H 
+    MOV OLDVECTOR,BX
+    MOV OLDADD,ES
+    MOV AX,251CH
+    MOV DX,OFFSET DELAY 
+    PUSH CS
+    POP DS
+    INT 21H
+    POP ES
+    POP DS
+    RET
+;-----------------------------
+RESET:
+    PUSH DS
+    MOV AX,251CH
+    LDS DX,DWORD PTR OLDVECTOR 
+    INT 21H
+    POP DS
+RET
+CURSOR:
+    PUSH DX
+    PUSH BX
+    MOV BH,0
+    MOV DH,0
+    MOV DL,0
+    MOV AH,2
+    INT 10H
+    POP BX
+    POP DX
+    RET
+;-----------------------------
+CODES ENDS
+END START
+
+
+
+

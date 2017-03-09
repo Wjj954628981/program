@@ -1,0 +1,19 @@
+﻿生成启动时间为 2016/6/1 9:12:34。
+     1>项目“C:\Users\lenovo\Desktop\MySdi\MySdi\MySdi.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\MySdi.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt MySdiView.cpp
+         MySdiView.cpp
+       Link:
+         D:\应用程序\Visual Studio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lenovo\Desktop\MySdi\Debug\MySdi.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\应用程序\Visual Studio2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"C:\Users\lenovo\Desktop\MySdi\Debug\MySdi.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lenovo\Desktop\MySdi\Debug\MySdi.lib" /MACHINE:X86 Debug\MySdi.res
+         Debug\DlgInput.obj
+         Debug\MainFrm.obj
+         Debug\MySdi.obj
+         Debug\MySdiDoc.obj
+         Debug\MySdiView.obj
+         Debug\stdafx.obj
+         MySdi.vcxproj -> C:\Users\lenovo\Desktop\MySdi\Debug\MySdi.exe
+     1>已完成生成项目“C:\Users\lenovo\Desktop\MySdi\MySdi\MySdi.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:18.56

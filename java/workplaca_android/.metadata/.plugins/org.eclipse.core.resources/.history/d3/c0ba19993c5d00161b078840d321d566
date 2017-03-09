@@ -1,0 +1,27 @@
+package com.example.task;
+
+import android.database.CursorJoiner.Result;
+import android.os.AsyncTask;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.ImageView;
+
+public class LoginTask extends AsyncTask<String, Void, String> {
+
+	private EditText edtUsername;
+	private EditText edtPassword;
+	private CheckBox chkAutoLogin;
+	
+	public LoginTask(EditText edtUsername, EditText edtPassword, CheckBox chkAutoLogin){
+		this.edtUsername = edtUsername;
+		this.edtPassword = edtPassword;
+		this.chkAutoLogin = chkAutoLogin;
+	}
+	
+	@Override
+	protected Result doInBackground(String... arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

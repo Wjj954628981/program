@@ -1,0 +1,16 @@
+D:\编程\数据库\课程设计\meeting\meeting\meeting\obj\Debug\meeting.csprojResolveAssemblyReference.cache
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\meeting.dll.config
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\meeting.dll
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\meeting.pdb
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\meetingBLL.dll
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\meetingDAL.dll
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\MeetingModel.dll
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\meetingBLL.pdb
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\meetingDAL.pdb
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\MeetingModel.pdb
+D:\编程\数据库\课程设计\meeting\meeting\meeting\obj\Debug\meeting.dll
+D:\编程\数据库\课程设计\meeting\meeting\meeting\obj\Debug\meeting.pdb
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\EntityFramework.dll
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\EntityFramework.SqlServer.dll
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\EntityFramework.xml
+D:\编程\数据库\课程设计\meeting\meeting\meeting\bin\EntityFramework.SqlServer.xml

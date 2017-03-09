@@ -1,0 +1,22 @@
+先打开DEM数据,单击三维地貌的菜单,如果没出现三维图
+就在视图区点几下,再点击那个菜单,
+因为这个操作是CFrameView类里面
+写的,鼠标右键启动旋转,左键关闭旋转
+
+
+里面有两个类是自己写,CLineView和OpenGL3D
+前面的一个类是用于视图分割的,也就是图形显示区旁边那一块用来设置旋转的区域
+里面有些函数看看,挺简单的,所以我没写注释
+OpenGL3D类是关于OpenGL的
+里面封装了全部关于OpenGL的操作,基本上都写了注释
+
+最重要的就是CFrameView类了
+里面很多成员函数,与操作有关的有
+OnDraw2d     //画二维图形的
+OnDraw3d    //画三维的
+OnPaint
+OnSize
+OnTimer
+OnLButtonDown
+OnRButtonDown
+大部分都写了注释的

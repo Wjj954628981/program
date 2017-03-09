@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Style Sheet Example</title>
+<style type="text/css">
+body{color:blue}
+p{text-align:center;
+margin-left:20%;
+margin-right:20%}
+h1,h2,h3{color:red}
+ul{color:green;
+font-weight:bold}
+</style>
+</head>
+
+<body>
+<h1>Welcome to this page</h1>
+<p>The above heading is red, since we specified that H1-H3 headings are red. This paragraph is blue, which is the default color for the entire body. It's also centered and has 20% margins, which we specified as the default for paragtaphs.</p>
+<p style="color:black">This paragraph has black text, brcause it overrides the default color in the paragraph tag. We didn't override the centering,so this paragraph is also centered.</p>
+<ul>
+<li>This is a bullet list.
+<li>It's a green and bold, because we specified those defaults for bullet lists.
+<li style="color:red">This item is red, overriding the default.
+<li>This irem is back to normal.
+</ul>
+<p>This is another paragraph with the default paragraph style.</p>
+</body>
+</html>

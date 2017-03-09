@@ -1,0 +1,10 @@
+﻿  util.c
+d:\编程\编译原理\语法分析树\parsetree\util.c(13): warning C4047: “=”:“int”与“void *”的间接级别不同
+d:\编程\编译原理\语法分析树\parsetree\util.c(32): warning C4047: “=”:“int”与“void *”的间接级别不同
+d:\编程\编译原理\语法分析树\parsetree\util.c(52): warning C4047: “=”:“int”与“void *”的间接级别不同
+d:\编程\编译原理\语法分析树\parsetree\util.c(72): warning C4047: “=”:“int”与“void *”的间接级别不同
+d:\编程\编译原理\语法分析树\parsetree\util.c(92): warning C4047: “=”:“int”与“void *”的间接级别不同
+d:\编程\编译原理\语法分析树\parsetree\util.c(113): warning C4047: “=”:“int”与“void *”的间接级别不同
+d:\编程\编译原理\语法分析树\parsetree\util.c(130): warning C4047: “=”:“int”与“void *”的间接级别不同
+d:\编程\编译原理\语法分析树\parsetree\util.c(172): warning C4047: “=”:“int”与“void *”的间接级别不同
+  ParseTree.vcxproj -> D:\编程\编译原理\语法分析树\ParseTree_vs\ParseTree\Debug\ParseTree.exe

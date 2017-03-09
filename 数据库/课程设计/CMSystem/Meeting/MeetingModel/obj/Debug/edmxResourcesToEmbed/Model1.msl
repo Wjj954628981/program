@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="acompany_retinue">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.acompany_retinue)">
+        <MappingFragment StoreEntitySet="acompany_retinue">
+          <ScalarProperty Name="users_id" ColumnName="users_id" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="re_id" ColumnName="re_id" />
+          <ScalarProperty Name="roomnumber" ColumnName="roomnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Admins)">
+        <MappingFragment StoreEntitySet="Admins">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Departments)">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="dept_name" ColumnName="dept_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotels">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Hotels)">
+        <MappingFragment StoreEntitySet="Hotels">
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="h_address" ColumnName="h_address" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meetings">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Meetings)">
+        <MappingFragment StoreEntitySet="Meetings">
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="m_name" ColumnName="m_name" />
+          <ScalarProperty Name="pre_num" ColumnName="pre_num" />
+          <ScalarProperty Name="max_num" ColumnName="max_num" />
+          <ScalarProperty Name="theme" ColumnName="theme" />
+          <ScalarProperty Name="begin_date" ColumnName="begin_date" />
+          <ScalarProperty Name="end_date" ColumnName="end_date" />
+          <ScalarProperty Name="m_city" ColumnName="m_city" />
+          <ScalarProperty Name="m_address" ColumnName="m_address" />
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ordusers">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ordusers)">
+        <MappingFragment StoreEntitySet="Ordusers">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="P_attend_m">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.P_attend_m)">
+        <MappingFragment StoreEntitySet="P_attend_m">
+          <ScalarProperty Name="users_id" ColumnName="users_id" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="arrive_date" ColumnName="arrive_date" />
+          <ScalarProperty Name="arrive_way" ColumnName="arrive_way" />
+          <ScalarProperty Name="leave_date" ColumnName="leave_date" />
+          <ScalarProperty Name="leave_way" ColumnName="leave_way" />
+          <ScalarProperty Name="room_number" ColumnName="room_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Persons">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Persons)">
+        <MappingFragment StoreEntitySet="Persons">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supadmin">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Supadmin)">
+        <MappingFragment StoreEntitySet="Supadmin">
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Users)">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="psw" ColumnName="psw" />
+          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

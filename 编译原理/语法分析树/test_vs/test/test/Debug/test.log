@@ -1,0 +1,5 @@
+﻿  myparser.c
+.\myparser.y(44): warning C4013: “getch”未定义；假设外部返回 int
+  mylexer.c
+  正在生成代码...
+  test.vcxproj -> D:\编程\编译原理\语法分析树\test_vs\test\Debug\test.exe

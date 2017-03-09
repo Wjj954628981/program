@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="jquery-ui.min.css">
+    <script>
+        $(function () {
+            var input = $("#input");
+            $("#btn").button().on("click",function () {
+                //设置input的值
+                $("#text").attr("value",input.spinner("value"));
+//                alert(input.spinner("value"));
+            });
+            input.spinner();
+            input.spinner("value","10");
+        });
+    </script>
+</head>
+<body>
+    <input id="input">
+    <a href="#" id="btn">getValue</a>
+    <input type="text" id="text">
+</body>
+</html>

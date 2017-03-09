@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Create a New Window</title>
+</head>
+
+<body>
+<h1>Create a New Window</h1>
+<hr />
+<p>Use the buttons below to test opening and closing windows in JavaScript.</p>
+<hr />
+<form name="winform">
+<input type="button" value="Open New Window" onclick="NewWin=window.open('','NewWin','toolbar=no,status=no,width=200,height=100');" />
+<p><input type="button" value="Close New Window" onclick="NewWin.close();" /></p>
+<p><input type="button" value="Close Main Window" onclick="window.close();" /></p>
+</form>
+</body>
+</html>

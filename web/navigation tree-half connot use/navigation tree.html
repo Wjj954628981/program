@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Create a Navigation Tree</title>
+<style>
+	A{text-decoration:none;}
+	#productsmenu,#supportmenu,#contactmenu{
+		display:none;
+		margin-left:2em;
+	}
+</style>
+</head>
+
+<body>
+<h1>Navigation Tree Example</h1>
+<p>The navigation tree allows you to expand and collapse items.</p>
+<ul>
+	<li><a id="products" href="#">[+] Products</a>
+	<ul id="productsmenu">
+		<li><a href="prodlist.html">Product List</a></li>
+		<li><a href="order.html">Order Form</a></li>
+		<li><a href="pricelist.html">Price List</a></li>
+	</ul>
+	<li><a id="support" href="#">[+] Support</a>
+	<ul id="supportmenu">
+		<li><a href="sforum.html">Support Forum</a></li>
+		<li><a href="scontact.html">Contact Support</a></li>
+	</ul>
+	<li><a id="contact" href="#">[+] Contact Us</a>
+	<ul id="contactmenu">
+		<li><a href="contact1.html">Service Department</a></li>
+		<li><a href="contact2.html">Sales Department</a></li>
+	</ul>
+</ul>
+<script language="javascript" type="text/javascript" src="tree.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+struts2 登录程序
+
+1、在jre1.5以上【含】
+
+
+2、创建 web project
+3、将struts2 依赖包考到web-info lib下
+    commons-logging-1.0.4.JAR
+    freemarker-2.3.15.JAR
+    ognl-2.7.3.JAR
+    struts2-core-2.1.8.1.JAR
+    xwork-core-2.1.6.JAR
+    commons-fileupload-1.2.1.JAR
+    
+ 4、在web.xml 中配置  StrutsPrepareAndExecuteFilter  或者FilterDispatcher
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+5、提供struts的配置文件struts2.xml放到src下
+
+
+6、建立jsp  login.jsp  login_success.jsp   login_error.jsp
+
+7、创建struts2 的action,action 可以不用集成struts2 中的任何类，也不用实现struts2的任何接口。它就是一个pojo【纯粹的java对象】类。
+	
+	struts2 的缺省方法名称:public String execute() throws Exception;
+	
+8、在action中提供getter和setter 方法 便于收集数据【属性驱动模式】
+
+9、将jsp和action配置到struts.xml配置中
+
+	<!-- 需要继承 struts-default包 -->
+		<package name="struts2" extends="struts-default">
+			<action name="login" class="com.jiemoxiaodi.struts.LoginAction">
+				<result name="success">/login_success.jsp</result>
+				<result name="error">/login_error.jsp</result>
+			</action>
+		</package>
+		
+10、了解struts-default.xml配置文件,default.properties。struts2默认后缀action

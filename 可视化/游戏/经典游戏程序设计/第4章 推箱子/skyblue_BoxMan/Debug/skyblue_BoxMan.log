@@ -1,0 +1,44 @@
+﻿生成启动时间为 2016/5/24 18:28:25。
+     1>项目“C:\Users\lenovo\Desktop\经典游戏程序设计\第4章 推箱子\skyblue_BoxMan\skyblue_BoxMan.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\skyblue_BoxMan.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+     1>d:\应用程序\visual studio2013\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+                 d:\应用程序\visual studio2013\vc\atlmfc\include\afx.h(33) : 参见“MBCS_Support_Deprecated_In_MFC”的声明
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\skyblue_BoxMan.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BoxMan.cpp BoxManWnd.cpp HelpDlg.cpp MissionLevelDlg.cpp skyblue_BoxMan.cpp
+         skyblue_BoxMan.cpp
+         MissionLevelDlg.cpp
+         HelpDlg.cpp
+         BoxManWnd.cpp
+         BoxMan.cpp
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman.cpp(85): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman.cpp(117): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman.cpp(579): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman.cpp(583): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman.cpp(587): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman.cpp(591): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /l"0x0804" /nologo /fo".\Debug\skyblue_BoxMan.res" skyblue_BoxMan.rc 
+       Link:
+         D:\应用程序\Visual Studio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\skyblue_BoxMan.exe" /INCREMENTAL /NOLOGO Winmm.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\应用程序\Visual Studio2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:".\Debug\skyblue_BoxMan.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\skyblue_BoxMan.lib" /MACHINE:X86 /SAFESEH .\Debug\skyblue_BoxMan.res
+         .\Debug\BoxMan.obj
+         .\Debug\BoxManWnd.obj
+         .\Debug\HelpDlg.obj
+         .\Debug\MissionLevelDlg.obj
+         .\Debug\skyblue_BoxMan.obj
+         .\Debug\StdAfx.obj
+     1>BoxMan.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+         skyblue_BoxMan.vcxproj -> C:\Users\lenovo\Desktop\经典游戏程序设计\第4章 推箱子\skyblue_BoxMan\.\Debug\skyblue_BoxMan.exe
+     1>已完成生成项目“C:\Users\lenovo\Desktop\经典游戏程序设计\第4章 推箱子\skyblue_BoxMan\skyblue_BoxMan.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:13.28

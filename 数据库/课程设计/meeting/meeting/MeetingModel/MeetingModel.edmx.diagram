@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5f9972fd7dcd404e890e43d149e910b2" Name="Diagram1" ZoomLevel="79" >
+        <EntityTypeShape EntityType="MeetingModel.accompany" Width="1.5" PointX="7.5" PointY="5.375" />
+        <EntityTypeShape EntityType="MeetingModel.Admin" Width="1.5" PointX="3" PointY="9.75" />
+        <EntityTypeShape EntityType="MeetingModel.attend" Width="1.5" PointX="5.25" PointY="5" />
+        <EntityTypeShape EntityType="MeetingModel.Department" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="MeetingModel.Hotel" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="MeetingModel.Meeting" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="MeetingModel.Orduser" Width="1.5" PointX="3" PointY="1.75" />
+        <EntityTypeShape EntityType="MeetingModel.Supadmin" Width="1.5" PointX="7.75" PointY="0.75" />
+        <AssociationConnector Association="MeetingModel.FK__accompany__2D27B809" />
+        <AssociationConnector Association="MeetingModel.FK__accompany__h_nam__2F10007B" />
+        <AssociationConnector Association="MeetingModel.FK__Admin__dept_id__145C0A3F" />
+        <AssociationConnector Association="MeetingModel.FK__attend__h_name__267ABA7A" />
+        <AssociationConnector Association="MeetingModel.FK__attend__m_id__25869641" />
+        <AssociationConnector Association="MeetingModel.FK__attend__particip__24927208" />
+        <AssociationConnector Association="MeetingModel.FK__Meeting__dept_id__1CF15040" />
+        <EntityTypeShape EntityType="MeetingModel.agenda" Width="1.5" PointX="5.25" PointY="9.625" />
+        <AssociationConnector Association="MeetingModel.FK__agenda__m_id__1FCDBCEB" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

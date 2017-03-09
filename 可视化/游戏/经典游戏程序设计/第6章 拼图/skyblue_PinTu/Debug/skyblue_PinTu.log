@@ -1,0 +1,11 @@
+﻿生成启动时间为 2016/5/24 19:22:41。
+     1>项目“C:\Users\lenovo\Desktop\经典游戏程序设计\第6章 拼图\skyblue_PinTu\skyblue_PinTu.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\skyblue_PinTu.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "D:\Microsoft Visual Studio\VC98\MFC\SRC\APPMODUL.CPP"
+         APPMODUL.CPP
+     1>c1xx : fatal error C1083: 无法打开源文件: “D:\Microsoft Visual Studio\VC98\MFC\SRC\APPMODUL.CPP”: No such file or directory
+     1>已完成生成项目“C:\Users\lenovo\Desktop\经典游戏程序设计\第6章 拼图\skyblue_PinTu\skyblue_PinTu.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.31

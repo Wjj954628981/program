@@ -1,0 +1,36 @@
+﻿生成启动时间为 2016/5/23 22:16:41。
+     1>项目“C:\Users\lenovo\Desktop\经典游戏程序设计\第4章 推箱子\skyblue_BoxMan\BoxMan_Editer\BoxMan_Editer.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\BoxMan_Editer.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+     1>d:\应用程序\visual studio2013\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+                 d:\应用程序\visual studio2013\vc\atlmfc\include\afx.h(33) : 参见“MBCS_Support_Deprecated_In_MFC”的声明
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /Gm /EHsc /RTC1 /MTd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\BoxMan_Editer.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt BoxMan_Edit.cpp BoxMan_Editer.cpp Boxman_EditerWnd.cpp LoadMapDlg.cpp
+         LoadMapDlg.cpp
+         Boxman_EditerWnd.cpp
+         BoxMan_Editer.cpp
+         BoxMan_Edit.cpp
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman_editer\boxman_edit.cpp(74): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman_editer\boxman_edit.cpp(102): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(211) : 参见“fopen”的声明
+     1>c:\users\lenovo\desktop\经典游戏程序设计\第4章 推箱子\skyblue_boxman\boxman_editer\boxman_edit.cpp(139): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(211) : 参见“fopen”的声明
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /l"0x0804" /nologo /fo".\Debug\BoxMan_Editer.res" BoxMan_Editer.rc 
+       Link:
+         D:\应用程序\Visual Studio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\BoxMan_Editer.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\应用程序\Visual Studio2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:".\Debug\BoxMan_Editer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\BoxMan_Editer.lib" /MACHINE:X86 /SAFESEH .\Debug\BoxMan_Editer.res
+         .\Debug\BoxMan_Edit.obj
+         .\Debug\BoxMan_Editer.obj
+         .\Debug\Boxman_EditerWnd.obj
+         .\Debug\LoadMapDlg.obj
+         .\Debug\StdAfx.obj
+     1>BoxMan_Edit.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+         BoxMan_Editer.vcxproj -> C:\Users\lenovo\Desktop\经典游戏程序设计\第4章 推箱子\skyblue_BoxMan\BoxMan_Editer\.\Debug\BoxMan_Editer.exe
+     1>已完成生成项目“C:\Users\lenovo\Desktop\经典游戏程序设计\第4章 推箱子\skyblue_BoxMan\BoxMan_Editer\BoxMan_Editer.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:14.35

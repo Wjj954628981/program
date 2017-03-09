@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="app.js"></script>
+    <link type="text/css" rel="stylesheet" href="jquery-ui.min.css">
+    <style>
+        .ui-selected{
+            background-color: #003eff;
+        }
+        #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+        #sortable li span { position: absolute; margin-left: -1.3em; }
+    </style>
+</head>
+<body>
+    <div style="width: 100px;height: 100px;border: 2px solid #ff0000" id="div"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="width: 100px;height: 100px;border: 2px solid #ff00ff" id="rect1"></div>
+    <div style="width: 200px;height: 200px;border: 2px solid #ff0000" id="rect2"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div style="width: 100px;height: 100px;background-color: #1c94c4" id="div2"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <strong>你喜欢的动漫有</strong>
+    <ul id="select">
+        <li id="right">A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+    <a href="#" id="btn">提交</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <ul id="sortable">
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 5</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 6</li>
+        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 7</li>
+    </ul>
+</body>
+</html>

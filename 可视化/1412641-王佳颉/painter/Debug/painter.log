@@ -1,0 +1,20 @@
+﻿生成启动时间为 2016/6/1 12:09:33。
+     1>项目“D:\编程\可视化\MFC-painter\painter\painter.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\painter.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt painterView.cpp
+         painterView.cpp
+       Link:
+         D:\应用程序\Visual Studio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\编程\可视化\MFC-painter\Debug\painter.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\应用程序\Visual Studio2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:"D:\编程\可视化\MFC-painter\Debug\painter.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"wWinMainCRTStartup" /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\编程\可视化\MFC-painter\Debug\painter.lib" /MACHINE:X86 Debug\painter.res
+         Debug\DlgPainter.obj
+         Debug\DrawData.obj
+         Debug\MainFrm.obj
+         Debug\painter.obj
+         Debug\painterDoc.obj
+         Debug\painterView.obj
+         Debug\stdafx.obj
+         painter.vcxproj -> D:\编程\可视化\MFC-painter\Debug\painter.exe
+     1>已完成生成项目“D:\编程\可视化\MFC-painter\painter\painter.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:02.02

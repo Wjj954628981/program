@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>Controlling sytle with javascript</title>
+<script language="javascript" type="text/javascript" src="styles.js"></script>
+</head>
+
+<body>
+<h1 id="head1">Controlling sytle with javascript</h1>
+<p id="p1">Select the color for paragraphs and headings using the form below.
+			The colors you specified will be dynamically changed in this document.
+			The change occurs as soon as you change the value of either of the drop-down lists in the from.</p>
+<form name="form1">
+<b>Heading color;</b>
+<select	 name="heading" onchange="changehead();">
+	<option value="black">Black</option>
+	<option value="red">Red</option>
+	<option value="blue">Blue</option>
+	<option value="green">Green</option>
+	<option value="yellow">Yellow</option>
+</select>
+<br />
+<b>Body text color:</b>
+<select	 name="body" onchange="changebody();">
+	<option value="black">Black</option>
+	<option value="red">Red</option>
+	<option value="blue">Blue</option>
+	<option value="green">Green</option>
+	<option value="yellow">Yellow</option>
+</select>
+</form>
+</body>
+</html>

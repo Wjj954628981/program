@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GamePeng.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePengDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="NumberString.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteItem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="GameLogic.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ScoreView.cpp">
+      <Filter>头文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameLogic.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePeng.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePengDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="NumberString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ScoreView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteItem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\BOMB.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\BT_CLOSE.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\BT_START.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\chess0.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\chess1.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\chess2.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\chess3.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\chess4.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\chess5.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\chess6.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\CHOOSE.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\GAME_SCORE.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\GAME_SCORE_NUMBER.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\GamePeng.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\TIME_BACK.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\TIME_NUMBER.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\TIME_THUMB.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="res\VIEW_BACK.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GamePeng.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\GamePeng.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Sound\A_combo1.ogg" />
+    <None Include="res\Sound\A_combo2.ogg" />
+    <None Include="res\Sound\A_combo3.ogg" />
+    <None Include="res\Sound\A_combo4.ogg" />
+    <None Include="res\Sound\A_combo5.ogg" />
+    <None Include="res\Sound\bgm_game.ogg" />
+    <None Include="res\Sound\S_bomb.ogg" />
+    <None Include="res\Sound\V_ready.ogg" />
+    <None Include="res\Sound\V_timeover.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>hide demo</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="jquery-2.1.1.min.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+    <script src="index.js"></script>
+</head>
+<body>
+<div>
+    <button id="hider">Hide</button>
+    <button id="shower">Show</button>
+    <div>
+        <span>Once</span> <span>upon</span> <span>a</span>
+        <span>time</span> <span>there</span> <span>were</span>
+        <span>three</span> <span>programmers...</span>
+    </div>
+</div>
+<div style="height: 100px"></div>
+<div>
+    <button id="hide" style="align-content: center">隐藏</button>
+    <button id="show">显示</button>
+    <button id="toggle1">隐藏/显示</button>
+    <div>
+        <p>hello</p>
+    </div>
+</div>
+<div style="height: 100px"></div>
+<script>
+    for (var i = 0; i < 5; i++) {
+        $("<div class='square'>").appendTo(document.body);
+    }
+    $(".square").click(function () {
+        $(this).hide(2000);
+    });
+</script>
+<div style="height: 100px"></div>
+<div>
+    <button id="in">fadeIn</button>
+    <button id="out">fadeOut</button>
+    <button id="toggle2">fadeToggle</button>
+    <button id="to">fadeTo</button>
+    <div class="div1" style="background-color: aqua;"></div>
+    <div class="div1" style="background-color: #ece023;"></div>
+    <div class="div1" style="background-color: darkgoldenrod;"></div>
+</div>
+<div style="height: 100px"></div>
+<div>
+    <div id="flipshow">出现</div>
+    <div id="fliphide">隐藏</div>
+    <div id="fliptoggle">出现/隐藏</div>
+    <div id="content">Hello World</div>
+</div>
+</body>
+</html>

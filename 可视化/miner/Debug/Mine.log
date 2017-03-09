@@ -1,0 +1,34 @@
+﻿生成启动时间为 2016/4/20 11:00:13。
+     1>项目“C:\Users\lenovo\Desktop\miner\Mine.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _AFXDLL /Gm /EHsc /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\Mine.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _AFXDLL /Gm /EHsc /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\Mine.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt LandMine.cpp Mine.cpp MineDlg.cpp
+         MineDlg.cpp
+     1>c:\users\lenovo\desktop\miner\minedlg.cpp(161): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\miner\minedlg.cpp(166): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+         Mine.cpp
+     1>c:\users\lenovo\desktop\miner\mine.cpp(52): warning C4996: 'CWinApp::Enable3dControls': CWinApp::Enable3dControls is no longer needed. You should remove this call.
+                 d:\应用程序\visual studio2013\vc\atlmfc\include\afxwin.h(5178) : 参见“CWinApp::Enable3dControls”的声明
+         LandMine.cpp
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /D _AFXDLL /l"0x0804" /nologo /fo".\Debug\Mine.res" Mine.rc 
+       Link:
+         D:\应用程序\Visual Studio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\Mine.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\应用程序\Visual Studio2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:".\Debug\Mine.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\Mine.lib" /MACHINE:X86 /SAFESEH .\Debug\Mine.res
+         .\Debug\LandMine.obj
+         .\Debug\Mine.obj
+         .\Debug\MineDlg.obj
+         .\Debug\StdAfx.obj
+     1>LandMine.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+         Mine.vcxproj -> C:\Users\lenovo\Desktop\miner\.\Debug\Mine.exe
+       BscMake:
+         D:\应用程序\Visual Studio2013\VC\bin\bscmake.exe /nologo /o".\Debug\Mine.bsc" .\Debug\LandMine.sbr .\Debug\Mine.sbr .\Debug\MineDlg.sbr .\Debug\StdAfx.sbr
+     1>已完成生成项目“C:\Users\lenovo\Desktop\miner\Mine.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:16.15

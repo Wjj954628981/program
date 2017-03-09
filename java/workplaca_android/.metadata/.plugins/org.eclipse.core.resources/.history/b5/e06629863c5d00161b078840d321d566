@@ -1,0 +1,7 @@
+package com.example.task;
+
+import android.os.AsyncTask;
+
+public class LoginTask extends AsyncTask<Params, Progress, Result> {
+
+}

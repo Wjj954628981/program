@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="MeetingModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="MeetingModelStoreContainer">
+    <EntitySet Name="accompany" EntityType="MeetingModel.Store.accompany" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Admin" EntityType="MeetingModel.Store.Admin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="attend" EntityType="MeetingModel.Store.attend" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Department" EntityType="MeetingModel.Store.Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Hotel" EntityType="MeetingModel.Store.Hotel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Meeting" EntityType="MeetingModel.Store.Meeting" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Orduser" EntityType="MeetingModel.Store.Orduser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Supadmin" EntityType="MeetingModel.Store.Supadmin" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="agenda" EntityType="MeetingModel.Store.agenda" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__accompany__2D27B809" Association="MeetingModel.Store.FK__accompany__2D27B809">
+      <End Role="attend" EntitySet="attend" />
+      <End Role="accompany" EntitySet="accompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK__accompany__h_nam__2F10007B" Association="MeetingModel.Store.FK__accompany__h_nam__2F10007B">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="accompany" EntitySet="accompany" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Admin__dept_id__145C0A3F" Association="MeetingModel.Store.FK__Admin__dept_id__145C0A3F">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Admin" EntitySet="Admin" />
+    </AssociationSet>
+    <AssociationSet Name="FK__attend__h_name__267ABA7A" Association="MeetingModel.Store.FK__attend__h_name__267ABA7A">
+      <End Role="Hotel" EntitySet="Hotel" />
+      <End Role="attend" EntitySet="attend" />
+    </AssociationSet>
+    <AssociationSet Name="FK__attend__m_id__25869641" Association="MeetingModel.Store.FK__attend__m_id__25869641">
+      <End Role="Meeting" EntitySet="Meeting" />
+      <End Role="attend" EntitySet="attend" />
+    </AssociationSet>
+    <AssociationSet Name="FK__attend__particip__24927208" Association="MeetingModel.Store.FK__attend__particip__24927208">
+      <End Role="Orduser" EntitySet="Orduser" />
+      <End Role="attend" EntitySet="attend" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Meeting__dept_id__1CF15040" Association="MeetingModel.Store.FK__Meeting__dept_id__1CF15040">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Meeting" EntitySet="Meeting" />
+    </AssociationSet>
+    <AssociationSet Name="FK__agenda__m_id__1FCDBCEB" Association="MeetingModel.Store.FK__agenda__m_id__1FCDBCEB">
+      <End Role="Meeting" EntitySet="Meeting" />
+      <End Role="agenda" EntitySet="agenda" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="accompany">
+    <Key>
+      <PropertyRef Name="participator_id" />
+      <PropertyRef Name="m_id" />
+      <PropertyRef Name="re_id" />
+    </Key>
+    <Property Name="participator_id" Type="int" Nullable="false" />
+    <Property Name="m_id" Type="int" Nullable="false" />
+    <Property Name="re_id" Type="int" Nullable="false" />
+    <Property Name="h_name" Type="varchar" Nullable="true" MaxLength="15" />
+    <Property Name="roomnumber" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="psw" Type="varchar" Nullable="false" MaxLength="25" />
+    <Property Name="dept_id" Type="varchar" Nullable="true" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="attend">
+    <Key>
+      <PropertyRef Name="participator_id" />
+      <PropertyRef Name="m_id" />
+    </Key>
+    <Property Name="participator_id" Type="int" Nullable="false" />
+    <Property Name="m_id" Type="int" Nullable="false" />
+    <Property Name="arrive_date" Type="datetime" Nullable="true" />
+    <Property Name="arrive_way" Type="varchar" Nullable="true" MaxLength="6" />
+    <Property Name="leave_date" Type="datetime" Nullable="true" />
+    <Property Name="leave_way" Type="varchar" Nullable="true" MaxLength="6" />
+    <Property Name="h_name" Type="varchar" Nullable="true" MaxLength="15" />
+    <Property Name="room_number" Type="int" Nullable="true" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="dept_id" />
+    </Key>
+    <Property Name="dept_id" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="dept_name" Type="varchar" Nullable="true" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Hotel">
+    <Key>
+      <PropertyRef Name="h_name" />
+    </Key>
+    <Property Name="h_name" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="h_street" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="h_number" Type="int" Nullable="true" />
+    <Property Name="phone_number" Type="varchar" Nullable="true" MaxLength="12" />
+  </EntityType>
+  <EntityType Name="Meeting">
+    <Key>
+      <PropertyRef Name="m_id" />
+    </Key>
+    <Property Name="m_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="m_name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="theme" Type="varchar" Nullable="true" MaxLength="30" />
+    <Property Name="begin_time" Type="datetime" Nullable="false" />
+    <Property Name="end_time" Type="datetime" Nullable="true" />
+    <Property Name="m_city" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="m_street" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="m_number" Type="int" Nullable="true" />
+    <Property Name="dept_id" Type="varchar" Nullable="true" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="Orduser">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="gender" Type="char" Nullable="true" MaxLength="1" />
+    <Property Name="e_mail" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="Supadmin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="psw" Type="varchar" Nullable="false" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="agenda">
+    <Key>
+      <PropertyRef Name="agenda_number" />
+    </Key>
+    <Property Name="m_id" Type="int" Nullable="true" />
+    <Property Name="detail" Type="varchar" Nullable="true" MaxLength="300" />
+    <Property Name="starttime" Type="datetime" Nullable="true" />
+    <Property Name="endtime" Type="datetime" Nullable="true" />
+    <Property Name="agenda_number" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__accompany__2D27B809">
+    <End Role="attend" Type="MeetingModel.Store.attend" Multiplicity="1" />
+    <End Role="accompany" Type="MeetingModel.Store.accompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="attend">
+        <PropertyRef Name="participator_id" />
+        <PropertyRef Name="m_id" />
+      </Principal>
+      <Dependent Role="accompany">
+        <PropertyRef Name="participator_id" />
+        <PropertyRef Name="m_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__accompany__h_nam__2F10007B">
+    <End Role="Hotel" Type="MeetingModel.Store.Hotel" Multiplicity="0..1" />
+    <End Role="accompany" Type="MeetingModel.Store.accompany" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="h_name" />
+      </Principal>
+      <Dependent Role="accompany">
+        <PropertyRef Name="h_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Admin__dept_id__145C0A3F">
+    <End Role="Department" Type="MeetingModel.Store.Department" Multiplicity="0..1" />
+    <End Role="Admin" Type="MeetingModel.Store.Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="dept_id" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="dept_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__attend__h_name__267ABA7A">
+    <End Role="Hotel" Type="MeetingModel.Store.Hotel" Multiplicity="0..1" />
+    <End Role="attend" Type="MeetingModel.Store.attend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hotel">
+        <PropertyRef Name="h_name" />
+      </Principal>
+      <Dependent Role="attend">
+        <PropertyRef Name="h_name" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__attend__m_id__25869641">
+    <End Role="Meeting" Type="MeetingModel.Store.Meeting" Multiplicity="1" />
+    <End Role="attend" Type="MeetingModel.Store.attend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meeting">
+        <PropertyRef Name="m_id" />
+      </Principal>
+      <Dependent Role="attend">
+        <PropertyRef Name="m_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__attend__particip__24927208">
+    <End Role="Orduser" Type="MeetingModel.Store.Orduser" Multiplicity="1" />
+    <End Role="attend" Type="MeetingModel.Store.attend" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orduser">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="attend">
+        <PropertyRef Name="participator_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Meeting__dept_id__1CF15040">
+    <End Role="Department" Type="MeetingModel.Store.Department" Multiplicity="0..1" />
+    <End Role="Meeting" Type="MeetingModel.Store.Meeting" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="dept_id" />
+      </Principal>
+      <Dependent Role="Meeting">
+        <PropertyRef Name="dept_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__agenda__m_id__1FCDBCEB">
+    <End Role="Meeting" Type="MeetingModel.Store.Meeting" Multiplicity="0..1" />
+    <End Role="agenda" Type="MeetingModel.Store.agenda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meeting">
+        <PropertyRef Name="m_id" />
+      </Principal>
+      <Dependent Role="agenda">
+        <PropertyRef Name="m_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="MeetingModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="MeetingModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="accompany" EntityType="MeetingModel.accompany" />
+          <EntitySet Name="Admin" EntityType="MeetingModel.Admin" />
+          <EntitySet Name="attend" EntityType="MeetingModel.attend" />
+          <EntitySet Name="Department" EntityType="MeetingModel.Department" />
+          <EntitySet Name="Hotel" EntityType="MeetingModel.Hotel" />
+          <EntitySet Name="Meeting" EntityType="MeetingModel.Meeting" />
+          <EntitySet Name="Orduser" EntityType="MeetingModel.Orduser" />
+          <EntitySet Name="Supadmin" EntityType="MeetingModel.Supadmin" />
+          <AssociationSet Name="FK__accompany__2D27B809" Association="MeetingModel.FK__accompany__2D27B809">
+            <End Role="attend" EntitySet="attend" />
+            <End Role="accompany" EntitySet="accompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK__accompany__h_nam__2F10007B" Association="MeetingModel.FK__accompany__h_nam__2F10007B">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="accompany" EntitySet="accompany" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Admin__dept_id__145C0A3F" Association="MeetingModel.FK__Admin__dept_id__145C0A3F">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Admin" EntitySet="Admin" />
+          </AssociationSet>
+          <AssociationSet Name="FK__attend__h_name__267ABA7A" Association="MeetingModel.FK__attend__h_name__267ABA7A">
+            <End Role="Hotel" EntitySet="Hotel" />
+            <End Role="attend" EntitySet="attend" />
+          </AssociationSet>
+          <AssociationSet Name="FK__attend__m_id__25869641" Association="MeetingModel.FK__attend__m_id__25869641">
+            <End Role="Meeting" EntitySet="Meeting" />
+            <End Role="attend" EntitySet="attend" />
+          </AssociationSet>
+          <AssociationSet Name="FK__attend__particip__24927208" Association="MeetingModel.FK__attend__particip__24927208">
+            <End Role="Orduser" EntitySet="Orduser" />
+            <End Role="attend" EntitySet="attend" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Meeting__dept_id__1CF15040" Association="MeetingModel.FK__Meeting__dept_id__1CF15040">
+            <End Role="Department" EntitySet="Department" />
+            <End Role="Meeting" EntitySet="Meeting" />
+          </AssociationSet>
+          <EntitySet Name="agenda" EntityType="MeetingModel.agenda" />
+          <AssociationSet Name="FK__agenda__m_id__1FCDBCEB" Association="MeetingModel.FK__agenda__m_id__1FCDBCEB">
+            <End Role="Meeting" EntitySet="Meeting" />
+            <End Role="agenda" EntitySet="agenda" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="accompany">
+          <Key>
+            <PropertyRef Name="participator_id" />
+            <PropertyRef Name="m_id" />
+            <PropertyRef Name="re_id" />
+          </Key>
+          <Property Name="participator_id" Type="Int32" Nullable="false" />
+          <Property Name="m_id" Type="Int32" Nullable="false" />
+          <Property Name="re_id" Type="Int32" Nullable="false" />
+          <Property Name="h_name" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="roomnumber" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="attend" Relationship="MeetingModel.FK__accompany__2D27B809" FromRole="accompany" ToRole="attend" />
+          <NavigationProperty Name="Hotel" Relationship="MeetingModel.FK__accompany__h_nam__2F10007B" FromRole="accompany" ToRole="Hotel" />
+        </EntityType>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="psw" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="dept_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Department" Relationship="MeetingModel.FK__Admin__dept_id__145C0A3F" FromRole="Admin" ToRole="Department" />
+        </EntityType>
+        <EntityType Name="attend">
+          <Key>
+            <PropertyRef Name="participator_id" />
+            <PropertyRef Name="m_id" />
+          </Key>
+          <Property Name="participator_id" Type="Int32" Nullable="false" />
+          <Property Name="m_id" Type="Int32" Nullable="false" />
+          <Property Name="arrive_date" Type="DateTime" Precision="0" />
+          <Property Name="arrive_way" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="leave_date" Type="DateTime" Precision="0" />
+          <Property Name="leave_way" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="h_name" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="room_number" Type="Int32" />
+          <NavigationProperty Name="accompany" Relationship="MeetingModel.FK__accompany__2D27B809" FromRole="attend" ToRole="accompany" />
+          <NavigationProperty Name="Hotel" Relationship="MeetingModel.FK__attend__h_name__267ABA7A" FromRole="attend" ToRole="Hotel" />
+          <NavigationProperty Name="Meeting" Relationship="MeetingModel.FK__attend__m_id__25869641" FromRole="attend" ToRole="Meeting" />
+          <NavigationProperty Name="Orduser" Relationship="MeetingModel.FK__attend__particip__24927208" FromRole="attend" ToRole="Orduser" />
+        </EntityType>
+        <EntityType Name="Department">
+          <Key>
+            <PropertyRef Name="dept_id" />
+          </Key>
+          <Property Name="dept_id" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="dept_name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Admin" Relationship="MeetingModel.FK__Admin__dept_id__145C0A3F" FromRole="Department" ToRole="Admin" />
+          <NavigationProperty Name="Meeting" Relationship="MeetingModel.FK__Meeting__dept_id__1CF15040" FromRole="Department" ToRole="Meeting" />
+        </EntityType>
+        <EntityType Name="Hotel">
+          <Key>
+            <PropertyRef Name="h_name" />
+          </Key>
+          <Property Name="h_name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="h_street" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="h_number" Type="Int32" />
+          <Property Name="phone_number" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="accompany" Relationship="MeetingModel.FK__accompany__h_nam__2F10007B" FromRole="Hotel" ToRole="accompany" />
+          <NavigationProperty Name="attend" Relationship="MeetingModel.FK__attend__h_name__267ABA7A" FromRole="Hotel" ToRole="attend" />
+        </EntityType>
+        <EntityType Name="Meeting">
+          <Key>
+            <PropertyRef Name="m_id" />
+          </Key>
+          <Property Name="m_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="m_name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="theme" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="begin_time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="end_time" Type="DateTime" Precision="3" />
+          <Property Name="m_city" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="m_street" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="m_number" Type="Int32" />
+          <Property Name="dept_id" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="attend" Relationship="MeetingModel.FK__attend__m_id__25869641" FromRole="Meeting" ToRole="attend" />
+          <NavigationProperty Name="Department" Relationship="MeetingModel.FK__Meeting__dept_id__1CF15040" FromRole="Meeting" ToRole="Department" />
+          <NavigationProperty Name="agenda" Relationship="MeetingModel.FK__agenda__m_id__1FCDBCEB" FromRole="Meeting" ToRole="agenda" />
+        </EntityType>
+        <EntityType Name="Orduser">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="gender" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="e_mail" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="attend" Relationship="MeetingModel.FK__attend__particip__24927208" FromRole="Orduser" ToRole="attend" />
+        </EntityType>
+        <EntityType Name="Supadmin">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="psw" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK__accompany__2D27B809">
+          <End Type="MeetingModel.attend" Role="attend" Multiplicity="1" />
+          <End Type="MeetingModel.accompany" Role="accompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="attend">
+              <PropertyRef Name="participator_id" />
+              <PropertyRef Name="m_id" />
+            </Principal>
+            <Dependent Role="accompany">
+              <PropertyRef Name="participator_id" />
+              <PropertyRef Name="m_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__accompany__h_nam__2F10007B">
+          <End Type="MeetingModel.Hotel" Role="Hotel" Multiplicity="0..1" />
+          <End Type="MeetingModel.accompany" Role="accompany" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="h_name" />
+            </Principal>
+            <Dependent Role="accompany">
+              <PropertyRef Name="h_name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Admin__dept_id__145C0A3F">
+          <End Type="MeetingModel.Department" Role="Department" Multiplicity="0..1" />
+          <End Type="MeetingModel.Admin" Role="Admin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="dept_id" />
+            </Principal>
+            <Dependent Role="Admin">
+              <PropertyRef Name="dept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__attend__h_name__267ABA7A">
+          <End Type="MeetingModel.Hotel" Role="Hotel" Multiplicity="0..1" />
+          <End Type="MeetingModel.attend" Role="attend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Hotel">
+              <PropertyRef Name="h_name" />
+            </Principal>
+            <Dependent Role="attend">
+              <PropertyRef Name="h_name" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__attend__m_id__25869641">
+          <End Type="MeetingModel.Meeting" Role="Meeting" Multiplicity="1" />
+          <End Type="MeetingModel.attend" Role="attend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Meeting">
+              <PropertyRef Name="m_id" />
+            </Principal>
+            <Dependent Role="attend">
+              <PropertyRef Name="m_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__attend__particip__24927208">
+          <End Type="MeetingModel.Orduser" Role="Orduser" Multiplicity="1" />
+          <End Type="MeetingModel.attend" Role="attend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Orduser">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="attend">
+              <PropertyRef Name="participator_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Meeting__dept_id__1CF15040">
+          <End Type="MeetingModel.Department" Role="Department" Multiplicity="0..1" />
+          <End Type="MeetingModel.Meeting" Role="Meeting" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Department">
+              <PropertyRef Name="dept_id" />
+            </Principal>
+            <Dependent Role="Meeting">
+              <PropertyRef Name="dept_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="agenda">
+          <Key>
+            <PropertyRef Name="agenda_number" />
+          </Key>
+          <Property Name="m_id" Type="Int32" />
+          <Property Name="detail" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Meeting" Relationship="MeetingModel.FK__agenda__m_id__1FCDBCEB" FromRole="agenda" ToRole="Meeting" />
+          <Property Name="starttime" Type="DateTime" Precision="3" />
+          <Property Name="endtime" Type="DateTime" Precision="3" />
+          <Property Name="agenda_number" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <Association Name="FK__agenda__m_id__1FCDBCEB">
+          <End Type="MeetingModel.Meeting" Role="Meeting" Multiplicity="0..1" />
+          <End Type="MeetingModel.agenda" Role="agenda" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Meeting">
+              <PropertyRef Name="m_id" />
+            </Principal>
+            <Dependent Role="agenda">
+              <PropertyRef Name="m_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MeetingModelStoreContainer" CdmEntityContainer="MeetingModelContainer">
+    <EntitySetMapping Name="accompany">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.accompany)">
+        <MappingFragment StoreEntitySet="accompany">
+          <ScalarProperty Name="participator_id" ColumnName="participator_id" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="re_id" ColumnName="re_id" />
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="roomnumber" ColumnName="roomnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Admin)">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="psw" ColumnName="psw" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attend">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.attend)">
+        <MappingFragment StoreEntitySet="attend">
+          <ScalarProperty Name="participator_id" ColumnName="participator_id" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="arrive_date" ColumnName="arrive_date" />
+          <ScalarProperty Name="arrive_way" ColumnName="arrive_way" />
+          <ScalarProperty Name="leave_date" ColumnName="leave_date" />
+          <ScalarProperty Name="leave_way" ColumnName="leave_way" />
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="room_number" ColumnName="room_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Department)">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="dept_name" ColumnName="dept_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotel">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Hotel)">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="h_street" ColumnName="h_street" />
+          <ScalarProperty Name="h_number" ColumnName="h_number" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meeting">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Meeting)">
+        <MappingFragment StoreEntitySet="Meeting">
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="m_name" ColumnName="m_name" />
+          <ScalarProperty Name="theme" ColumnName="theme" />
+          <ScalarProperty Name="begin_time" ColumnName="begin_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+          <ScalarProperty Name="m_city" ColumnName="m_city" />
+          <ScalarProperty Name="m_street" ColumnName="m_street" />
+          <ScalarProperty Name="m_number" ColumnName="m_number" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orduser">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Orduser)">
+        <MappingFragment StoreEntitySet="Orduser">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supadmin">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Supadmin)">
+        <MappingFragment StoreEntitySet="Supadmin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="psw" ColumnName="psw" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="agenda">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.agenda)">
+        <MappingFragment StoreEntitySet="agenda">
+          <ScalarProperty Name="agenda_number" ColumnName="agenda_number" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="starttime" ColumnName="starttime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="默认值" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

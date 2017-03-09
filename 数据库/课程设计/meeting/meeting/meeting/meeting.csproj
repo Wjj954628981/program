@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A79E950C-C52B-4513-BC4C-527B883FF113}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>meeting</RootNamespace>
+    <AssemblyName>meeting</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Meetings\AccompanyAdd.aspx" />
+    <Content Include="Meetings\AccompanyAdd2.aspx" />
+    <Content Include="Meetings\AccompanyList.aspx" />
+    <Content Include="Meetings\AccompanyList2.aspx" />
+    <Content Include="Meetings\Agenda.aspx" />
+    <Content Include="Meetings\Agenda2.aspx" />
+    <Content Include="Meetings\AgendaAdd.aspx" />
+    <Content Include="Meetings\AgendaAdd2.aspx" />
+    <Content Include="Meetings\AttendAdd.aspx" />
+    <Content Include="Meetings\AttendAdd2.aspx" />
+    <Content Include="Meetings\AttendList.aspx" />
+    <Content Include="Meetings\AttendList2.aspx" />
+    <Content Include="Meetings\HotelAdd2.aspx" />
+    <Content Include="Meetings\HotelList2.aspx" />
+    <Content Include="Meetings\loading.aspx" />
+    <Content Include="Meetings\Login.aspx" />
+    <Content Include="Meetings\MeetingAdd2.aspx" />
+    <Content Include="Meetings\MeetingList2.aspx" />
+    <Content Include="Meetings\MeetingList3.aspx" />
+    <Content Include="Meetings\OrduserAdd3.aspx" />
+    <Content Include="Meetings\superadmin.aspx" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Meetings\MeetingAdd.aspx" />
+    <Content Include="Meetings\MeetingList.aspx" />
+    <Content Include="Meetings\AdminAdd.aspx" />
+    <Content Include="Meetings\AdminList.aspx" />
+    <Content Include="Meetings\DepartmentAdd.aspx" />
+    <Content Include="Meetings\DepartmentList.aspx" />
+    <Content Include="Meetings\HotelAdd.aspx" />
+    <Content Include="Meetings\HotelList.aspx" />
+    <Content Include="Meetings\OrduserAdd.aspx" />
+    <Content Include="Meetings\OrduserList.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Meetings\AccompanyAdd.aspx.cs">
+      <DependentUpon>AccompanyAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AccompanyAdd.aspx.designer.cs">
+      <DependentUpon>AccompanyAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AccompanyAdd2.aspx.cs">
+      <DependentUpon>AccompanyAdd2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AccompanyAdd2.aspx.designer.cs">
+      <DependentUpon>AccompanyAdd2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AccompanyList.aspx.cs">
+      <DependentUpon>AccompanyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AccompanyList.aspx.designer.cs">
+      <DependentUpon>AccompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AccompanyList2.aspx.cs">
+      <DependentUpon>AccompanyList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AccompanyList2.aspx.designer.cs">
+      <DependentUpon>AccompanyList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\Agenda.aspx.cs">
+      <DependentUpon>Agenda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\Agenda.aspx.designer.cs">
+      <DependentUpon>Agenda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\Agenda2.aspx.cs">
+      <DependentUpon>Agenda2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\Agenda2.aspx.designer.cs">
+      <DependentUpon>Agenda2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AgendaAdd.aspx.cs">
+      <DependentUpon>AgendaAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AgendaAdd.aspx.designer.cs">
+      <DependentUpon>AgendaAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AgendaAdd2.aspx.cs">
+      <DependentUpon>AgendaAdd2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AgendaAdd2.aspx.designer.cs">
+      <DependentUpon>AgendaAdd2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AttendAdd.aspx.cs">
+      <DependentUpon>AttendAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AttendAdd.aspx.designer.cs">
+      <DependentUpon>AttendAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AttendAdd2.aspx.cs">
+      <DependentUpon>AttendAdd2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AttendAdd2.aspx.designer.cs">
+      <DependentUpon>AttendAdd2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AttendList.aspx.cs">
+      <DependentUpon>AttendList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AttendList.aspx.designer.cs">
+      <DependentUpon>AttendList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AttendList2.aspx.cs">
+      <DependentUpon>AttendList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AttendList2.aspx.designer.cs">
+      <DependentUpon>AttendList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\HotelAdd2.aspx.cs">
+      <DependentUpon>HotelAdd2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\HotelAdd2.aspx.designer.cs">
+      <DependentUpon>HotelAdd2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\HotelList2.aspx.cs">
+      <DependentUpon>HotelList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\HotelList2.aspx.designer.cs">
+      <DependentUpon>HotelList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\loading.aspx.cs">
+      <DependentUpon>loading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\loading.aspx.designer.cs">
+      <DependentUpon>loading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\MeetingAdd.aspx.cs">
+      <DependentUpon>MeetingAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\MeetingAdd.aspx.designer.cs">
+      <DependentUpon>MeetingAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\MeetingAdd2.aspx.cs">
+      <DependentUpon>MeetingAdd2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\MeetingAdd2.aspx.designer.cs">
+      <DependentUpon>MeetingAdd2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\MeetingList.aspx.cs">
+      <DependentUpon>MeetingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\MeetingList.aspx.designer.cs">
+      <DependentUpon>MeetingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\MeetingList2.aspx.cs">
+      <DependentUpon>MeetingList2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\MeetingList2.aspx.designer.cs">
+      <DependentUpon>MeetingList2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\MeetingList3.aspx.cs">
+      <DependentUpon>MeetingList3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\MeetingList3.aspx.designer.cs">
+      <DependentUpon>MeetingList3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\OrduserAdd3.aspx.cs">
+      <DependentUpon>OrduserAdd3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\OrduserAdd3.aspx.designer.cs">
+      <DependentUpon>OrduserAdd3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\superadmin.aspx.cs">
+      <DependentUpon>superadmin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\superadmin.aspx.designer.cs">
+      <DependentUpon>superadmin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AdminAdd.aspx.cs">
+      <DependentUpon>AdminAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AdminAdd.aspx.designer.cs">
+      <DependentUpon>AdminAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\AdminList.aspx.cs">
+      <DependentUpon>AdminList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\AdminList.aspx.designer.cs">
+      <DependentUpon>AdminList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\DepartmentAdd.aspx.cs">
+      <DependentUpon>DepartmentAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\DepartmentAdd.aspx.designer.cs">
+      <DependentUpon>DepartmentAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\DepartmentList.aspx.cs">
+      <DependentUpon>DepartmentList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\DepartmentList.aspx.designer.cs">
+      <DependentUpon>DepartmentList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\HotelAdd.aspx.cs">
+      <DependentUpon>HotelAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\HotelAdd.aspx.designer.cs">
+      <DependentUpon>HotelAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\HotelList.aspx.cs">
+      <DependentUpon>HotelList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\HotelList.aspx.designer.cs">
+      <DependentUpon>HotelList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\OrduserAdd.aspx.cs">
+      <DependentUpon>OrduserAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\OrduserAdd.aspx.designer.cs">
+      <DependentUpon>OrduserAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Meetings\OrduserList.aspx.cs">
+      <DependentUpon>OrduserList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Meetings\OrduserList.aspx.designer.cs">
+      <DependentUpon>OrduserList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\meetingBLL\meetingBLL.csproj">
+      <Project>{06ab0b96-f01f-41b0-9d43-da29d40efc79}</Project>
+      <Name>meetingBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\meetingDAL\meetingDAL.csproj">
+      <Project>{1bfcd2ca-c926-46a9-9243-78a15592d9ea}</Project>
+      <Name>meetingDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MeetingModel\MeetingModel.csproj">
+      <Project>{9ddfbae6-8fbd-419c-905d-9897d6a82215}</Project>
+      <Name>MeetingModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3692</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3692/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

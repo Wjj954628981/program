@@ -1,0 +1,23 @@
+﻿生成启动时间为 2016/5/31 10:51:09。
+     1>项目“D:\编程\可视化\sdisquares\sdisquares\sdisquares.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Debug\sdisquares.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+         stdafx.cpp
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\sdisquares.pch" /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt DrawData.cpp MainFrm.cpp sdisquares.cpp sdisquaresDoc.cpp sdisquaresView.cpp
+         sdisquaresView.cpp
+     1>d:\编程\可视化\sdisquares\sdisquares\sdisquaresview.cpp(138): error C2679: 二进制“=”: 没有找到接受“DrawData *”类型的右操作数的运算符(或没有可接受的转换)
+                 d:\编程\可视化\sdisquares\sdisquares\drawdata.h(10): 可能是“DrawData &DrawData::operator =(const DrawData &)”
+                 尝试匹配参数列表“(DrawData, DrawData *)”时
+         sdisquaresDoc.cpp
+     1>d:\编程\可视化\sdisquares\sdisquares\sdisquaresdoc.cpp(26): error C2065: “IDC_COLOR_RED”: 未声明的标识符
+     1>d:\编程\可视化\sdisquares\sdisquares\sdisquaresdoc.cpp(26): error C2065: “IDC_COLOR_YELLO”: 未声明的标识符
+     1>d:\编程\可视化\sdisquares\sdisquares\sdisquaresdoc.cpp(164): error C2065: “IDC_COLOR_RED”: 未声明的标识符
+         sdisquares.cpp
+         MainFrm.cpp
+         DrawData.cpp
+         正在生成代码...
+     1>已完成生成项目“D:\编程\可视化\sdisquares\sdisquares\sdisquares.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:04.64

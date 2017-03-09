@@ -1,0 +1,117 @@
+﻿生成启动时间为 2016/5/24 15:39:57。
+     1>项目“C:\Users\lenovo\Desktop\麻将\program.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp".\Debug\program.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt StdAfx.cpp
+         StdAfx.cpp
+     1>d:\应用程序\visual studio2013\vc\atlmfc\include\afx.h(38): warning C4996: 'MBCS_Support_Deprecated_In_MFC': MBCS support in MFC is deprecated and may be removed in a future version of MFC.
+                 d:\应用程序\visual studio2013\vc\atlmfc\include\afx.h(33) : 参见“MBCS_Support_Deprecated_In_MFC”的声明
+         _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+         D:\应用程序\Visual Studio2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _VC80_UPGRADE=0x0600 /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /Gy- /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp".\Debug\program.pch" /Fo".\Debug\\" /Fd".\Debug\vc120.pdb" /FR".\Debug\\" /Gd /TP /analyze- /errorReport:prompt Enter.cpp Getin.cpp MainFrm.cpp Mp3Sound.cpp Num.cpp program.cpp programDoc.cpp programView.cpp Server.cpp WaveSound.cpp Card.cpp Managers.cpp Net.cpp NetControl.cpp
+         NetControl.cpp
+     1>c:\users\lenovo\desktop\麻将\netcontrol.cpp(47): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\netcontrol.cpp(50): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\netcontrol.cpp(62): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(118) : 参见“strcat”的声明
+     1>c:\users\lenovo\desktop\麻将\netcontrol.cpp(119): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\netcontrol.cpp(287): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\netcontrol.cpp(495): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\netcontrol.cpp(523): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+         Net.cpp
+         Managers.cpp
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(33): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(215): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(217): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(219): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(252): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(254): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(256): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(297): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(299): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(301): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(352): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(356): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(425): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(427): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(429): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(483): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\stdio.h(356) : 参见“sprintf”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(870): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(877): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(881): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(885): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(889): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(893): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>c:\users\lenovo\desktop\麻将\managers.cpp(897): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+         Card.cpp
+         WaveSound.cpp
+         Server.cpp
+         programView.cpp
+         programDoc.cpp
+         program.cpp
+     1>c:\users\lenovo\desktop\麻将\program.cpp(60): warning C4996: 'CWinApp::Enable3dControls': CWinApp::Enable3dControls is no longer needed. You should remove this call.
+                 d:\应用程序\visual studio2013\vc\atlmfc\include\afxwin.h(5178) : 参见“CWinApp::Enable3dControls”的声明
+         Num.cpp
+         Mp3Sound.cpp
+     1>c:\users\lenovo\desktop\麻将\mp3sound.cpp(21): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\应用程序\visual studio2013\vc\include\string.h(112) : 参见“strcpy”的声明
+         MainFrm.cpp
+         Getin.cpp
+         Enter.cpp
+         正在生成代码...
+       ResourceCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\rc.exe /D _DEBUG /D _VC80_UPGRADE=0x0600 /D _AFXDLL /l"0x0804" /nologo /fo".\Debug\program.res" program.rc 
+       Link:
+         D:\应用程序\Visual Studio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Debug\program.exe" /INCREMENTAL /NOLOGO /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /manifestinput:"D:\应用程序\Visual Studio2013\VC\Include\Manifest\dpiaware.manifest" /DEBUG /PDB:".\Debug\program.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\Debug\program.lib" /MACHINE:X86 /SAFESEH .\Debug\program.res
+         .\Debug\Enter.obj
+         .\Debug\Getin.obj
+         .\Debug\MainFrm.obj
+         .\Debug\Mp3Sound.obj
+         .\Debug\Num.obj
+         .\Debug\program.obj
+         .\Debug\programDoc.obj
+         .\Debug\programView.obj
+         .\Debug\Server.obj
+         .\Debug\StdAfx.obj
+         .\Debug\WaveSound.obj
+         .\Debug\Card.obj
+         .\Debug\Managers.obj
+         .\Debug\Net.obj
+         .\Debug\NetControl.obj
+     1>Enter.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+         program.vcxproj -> C:\Users\lenovo\Desktop\麻将\.\Debug\program.exe
+       BscMake:
+         D:\应用程序\Visual Studio2013\VC\bin\bscmake.exe /nologo /o".\Debug\program.bsc" .\Debug\Enter.sbr .\Debug\Getin.sbr .\Debug\MainFrm.sbr .\Debug\Mp3Sound.sbr .\Debug\Num.sbr .\Debug\program.sbr .\Debug\programDoc.sbr .\Debug\programView.sbr .\Debug\Server.sbr .\Debug\StdAfx.sbr .\Debug\WaveSound.sbr .\Debug\Card.sbr .\Debug\Managers.sbr .\Debug\Net.sbr .\Debug\NetControl.sbr
+     1>已完成生成项目“C:\Users\lenovo\Desktop\麻将\program.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:23.21

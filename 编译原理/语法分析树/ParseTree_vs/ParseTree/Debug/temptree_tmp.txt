@@ -1,0 +1,49 @@
+17Statement[{}]  
+1   Id[main]  
+17   Statement[{}]  
+3      Statement[declare]  
+3         Type[int]  Integer
+3         Idlist[,]  Integer
+3            Id[a]  Integer
+3            Idlist[,]  Integer
+3               Id[b]  Integer
+3               Idlist[,]  Integer
+3                  Id[i]  Integer
+3                  Idlist[,]  Integer
+3                     Id[t]  Integer
+3                     Id[n]  Integer
+17      Statement[{}]  
+5         Expr[=]  Integer
+5            Id[a]  Integer
+5            Id[0]  Integer
+17         Statement[{}]  
+6            Expr[=]  Integer
+6               Id[b]  Integer
+6               Id[1]  Integer
+17            Statement[{}]  
+7               Expr[=]  Integer
+7                  Id[i]  Integer
+7                  Id[1]  Integer
+16               Statement[while]  
+9                  Expr[<]  Boolean
+9                     Id[i]  Integer
+9                     Id[n]  Integer
+16                  Statement[{}]  
+11                     Expr[=]  Integer
+11                        Id[t]  Integer
+11                        Id[b]  Integer
+16                     Statement[{}]  
+12                        Expr[=]  Integer
+12                           Id[b]  Integer
+12                           Expr[+]  Integer
+12                              Id[a]  Integer
+12                              Id[b]  Integer
+16                        Statement[{}]  
+14                           Expr[=]  Integer
+14                              Id[a]  Integer
+14                              Id[t]  Integer
+15                           Expr[=]  Integer
+15                              Id[i]  Integer
+15                              Expr[+]  Integer
+15                                 Id[i]  Integer
+15                                 Id[1]  Integer

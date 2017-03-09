@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MeetingModelStoreContainer" CdmEntityContainer="MeetingModelContainer">
+    <EntitySetMapping Name="accompany">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.accompany)">
+        <MappingFragment StoreEntitySet="accompany">
+          <ScalarProperty Name="participator_id" ColumnName="participator_id" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="re_id" ColumnName="re_id" />
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="roomnumber" ColumnName="roomnumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Admin)">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="psw" ColumnName="psw" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attend">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.attend)">
+        <MappingFragment StoreEntitySet="attend">
+          <ScalarProperty Name="participator_id" ColumnName="participator_id" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="arrive_date" ColumnName="arrive_date" />
+          <ScalarProperty Name="arrive_way" ColumnName="arrive_way" />
+          <ScalarProperty Name="leave_date" ColumnName="leave_date" />
+          <ScalarProperty Name="leave_way" ColumnName="leave_way" />
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="room_number" ColumnName="room_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Department)">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+          <ScalarProperty Name="dept_name" ColumnName="dept_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Hotel">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Hotel)">
+        <MappingFragment StoreEntitySet="Hotel">
+          <ScalarProperty Name="h_name" ColumnName="h_name" />
+          <ScalarProperty Name="h_street" ColumnName="h_street" />
+          <ScalarProperty Name="h_number" ColumnName="h_number" />
+          <ScalarProperty Name="phone_number" ColumnName="phone_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meeting">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Meeting)">
+        <MappingFragment StoreEntitySet="Meeting">
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="m_name" ColumnName="m_name" />
+          <ScalarProperty Name="theme" ColumnName="theme" />
+          <ScalarProperty Name="begin_time" ColumnName="begin_time" />
+          <ScalarProperty Name="end_time" ColumnName="end_time" />
+          <ScalarProperty Name="m_city" ColumnName="m_city" />
+          <ScalarProperty Name="m_street" ColumnName="m_street" />
+          <ScalarProperty Name="m_number" ColumnName="m_number" />
+          <ScalarProperty Name="dept_id" ColumnName="dept_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orduser">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Orduser)">
+        <MappingFragment StoreEntitySet="Orduser">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="e_mail" ColumnName="e_mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Supadmin">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.Supadmin)">
+        <MappingFragment StoreEntitySet="Supadmin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="psw" ColumnName="psw" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="agenda">
+      <EntityTypeMapping TypeName="IsTypeOf(MeetingModel.agenda)">
+        <MappingFragment StoreEntitySet="agenda">
+          <ScalarProperty Name="agenda_number" ColumnName="agenda_number" />
+          <ScalarProperty Name="m_id" ColumnName="m_id" />
+          <ScalarProperty Name="detail" ColumnName="detail" />
+          <ScalarProperty Name="starttime" ColumnName="starttime" />
+          <ScalarProperty Name="endtime" ColumnName="endtime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e7148543f8394bfbae64ae6c670e4954" Name="Diagram1" >
+        <EntityTypeShape EntityType="Model1.acompany_retinue" Width="1.5" PointX="10.5" PointY="6.625" />
+        <EntityTypeShape EntityType="Model1.Admins" Width="1.5" PointX="5.25" PointY="6.75" />
+        <EntityTypeShape EntityType="Model1.Departments" Width="1.5" PointX="3" PointY="9.875" />
+        <EntityTypeShape EntityType="Model1.Hotels" Width="1.5" PointX="3.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Model1.Meetings" Width="1.5" PointX="6" PointY="1.875" />
+        <EntityTypeShape EntityType="Model1.Ordusers" Width="1.5" PointX="5.25" PointY="12" />
+        <EntityTypeShape EntityType="Model1.P_attend_m" Width="1.5" PointX="8.25" PointY="6.25" />
+        <EntityTypeShape EntityType="Model1.Persons" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model1.Supadmin" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="Model1.Users" Width="1.5" PointX="3" PointY="6.375" />
+        <AssociationConnector Association="Model1.FK__acompany___re_id__2C3393D0" />
+        <AssociationConnector Association="Model1.FK__acompany_retinue__2B3F6F97" />
+        <AssociationConnector Association="Model1.FK__Admins__dept_id__1CF15040" />
+        <AssociationConnector Association="Model1.FK__Admins__id__1BFD2C07" />
+        <AssociationConnector Association="Model1.FK__Meetings__h_name__24927208" />
+        <AssociationConnector Association="Model1.FK__P_attend_m__m_id__286302EC" />
+        <AssociationConnector Association="Model1.FK__Ordusers__id__1FCDBCEB" />
+        <AssociationConnector Association="Model1.FK__P_attend___users__276EDEB3" />
+        <AssociationConnector Association="Model1.FK__Users__id__145C0A3F" />
+        <AssociationConnector Association="Model1.FK__Supadmin__id__173876EA" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
