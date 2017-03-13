@@ -1,8 +1,8 @@
 
 var config = {
     database: 'test',
-    username: 'www',
-    password: 'www',
+    username: 'root',
+    password: '1996wangjiajie.',
     host: 'localhost',
     port: 3306
 };
