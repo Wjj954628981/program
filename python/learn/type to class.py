@@ -13,5 +13,7 @@ Hello2 = type('Hello2', (object,), dict(hello2 = fn))
 
 h2 = Hello2()
 
+print(h)
 print(type(h))
+print(h2)
 print(type(h2))
