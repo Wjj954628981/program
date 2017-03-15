@@ -1,8 +1,4 @@
 function[L,U,P]=PLU(A)
-A=[1 2 -3 4
-    4 8 12 -8
-    2 3 2 1
-    -3 -1 1 -4];
 [n,n]=size(A);
 p=(1:n)';
 for k=1:n-1 
