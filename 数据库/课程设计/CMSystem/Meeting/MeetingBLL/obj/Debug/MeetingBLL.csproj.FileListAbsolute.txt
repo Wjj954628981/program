@@ -26,3 +26,17 @@ D:\编程\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\EntityFramework
 D:\编程\数据库\课程设计\CMSystem\Meeting\MeetingBLL\obj\Debug\MeetingBLL.csprojResolveAssemblyReference.cache
 D:\编程\数据库\课程设计\CMSystem\Meeting\MeetingBLL\obj\Debug\MeetingBLL.dll
 D:\编程\数据库\课程设计\CMSystem\Meeting\MeetingBLL\obj\Debug\MeetingBLL.pdb
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\MeetingBLL.dll.config
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\MeetingBLL.dll
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\MeetingBLL.pdb
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\EntityFramework.dll
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\EntityFramework.SqlServer.dll
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\MeetingDAL.dll
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\MeetingModel.dll
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\MeetingDAL.pdb
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\MeetingModel.pdb
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\EntityFramework.xml
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\bin\EntityFramework.SqlServer.xml
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\obj\Debug\MeetingBLL.csprojResolveAssemblyReference.cache
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\obj\Debug\MeetingBLL.dll
+D:\Program\数据库\课程设计\CMSystem\Meeting\MeetingBLL\obj\Debug\MeetingBLL.pdb
