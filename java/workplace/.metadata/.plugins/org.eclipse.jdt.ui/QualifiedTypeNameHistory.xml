@@ -19,7 +19,6 @@
 <fullyQualifiedTypeName name="unit.file"/>
 <fullyQualifiedTypeName name="socket.UDPThread"/>
 <fullyQualifiedTypeName name="socket.MultiBroadCast"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="frame.testmain"/>
 <fullyQualifiedTypeName name="unit.myfiletab"/>
 <fullyQualifiedTypeName name="java.net.SocketAddress"/>
@@ -52,7 +51,6 @@
 <fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionSupport"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="org.apache.struts2.ServletActionContext"/>
 <fullyQualifiedTypeName name="com.opensymphony.xwork2.ActionContext"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
