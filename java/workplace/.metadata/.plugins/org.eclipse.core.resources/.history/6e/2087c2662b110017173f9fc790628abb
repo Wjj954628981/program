@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class test6 {
+
+	public static void main(String[] args) {
+		Scanner cin = new Scanner(System.in);
+		int num = cin.nextInt();
+		int times = cin.nextInt();
+		int[] states = new int[num];
+		for(int i=0;i<num;i++){
+			states[i] = cin.nextInt();
+		}
+		for(int i=0;i<times;i++){
+			for(int j=0;j<num;j++){
+				if(j!=num-1){
+					states[j] += states[j+1];
+				}else{
+					states[num-1] += states[0];
+				}
+				if(states[j]>=100){
+					states[j] %= 100;
+				}
+			}
+		}
+		for(int i=0;i<num;i++){
+			System.out.print(states[i]+" ");
+		}
+	}
+}
