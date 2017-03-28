@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1490632558 source:c:\users\lenovo\desktop\lumodule\module.cpp
+	<iostream>
+	<windows.h>
+	<intrin.h>
+	<ctime>
+	<cstdlib>
+

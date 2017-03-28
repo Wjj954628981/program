@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1490498182 source:c:\users\lenovo\desktop\lu\main.cpp
+	<iostream>
+	<windows.h>
+	<intrin.h>
+	<ctime>
+	<cstdlib>
+
+1490419938 source:c:\users\lenovo\desktop\lu\module.cpp
+	<iostream>
+	<windows.h>
+	<intrin.h>
+	<ctime>
+	<cstdlib>
+
+1490628411 source:c:\users\lenovo\desktop\lu\test.cpp
+	<iostream>
+	<windows.h>
+	<intrin.h>
+	<ctime>
+	<cstdlib>
+
