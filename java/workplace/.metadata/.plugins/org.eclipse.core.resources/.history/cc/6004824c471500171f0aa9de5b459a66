@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class test11 {
+
+	public static void main(String[] args) {
+		Scanner cin = new Scanner(System.in);
+		String[] a = cin.nextLine().split("");
+		int rank = 0;
+		List<Character> charList = new ArrayList<Character>();
+	}
+
+}

@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class test9 {
+
+	public static void main(String[] args) {
+		Scanner cin = new Scanner(System.in);
+		int n = cin.nextInt();
+		int m = cin.nextInt();
+		cin.next();
+		String[] sentence = new String[n];
+		for(int i=0;i<n;i++){
+			sentence[i] = cin.nextLine();
+		}
+		String[] search = new String[m];
+		for(int i=0;i<m;i++){
+			search[i] = cin.nextLine();
+		}
+		
+		for(int i=0;i<m;i++){
+			String[] a = search[i].split(" ");
+			for(int k=0;k<a.length;k++){
+				System.out.println(a[k]);
+			}
+//			int[] contain = new int[n];
+//			for(int j=0;j<n;j++){
+//				for(int k=0;k<a.length;k++){
+//					if(sentence[j].contains(a[k])){
+//						
+//					}
+//				}
+//			}
+		}
+	}
+
+}
