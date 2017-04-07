@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class test12 {
+	public static void main(String[] args) {
+		Scanner cin = new Scanner(System.in);
+		int num_length = cin.nextInt();
+		cin.nextLine();
+		String a = cin.nextLine();
+		String b = cin.nextLine();
+		System.out.println(a+","+b);
+	}
+}
