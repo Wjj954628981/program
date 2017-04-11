@@ -36,12 +36,10 @@ grad = zeros(size(theta));
 %           grad = grad + YOUR_CODE_HERE (using the temp variable)
 %
 
-h = sigmoid(X * theta); % h_theta(X) : m*1 
+h = sigmoid(X * theta); 
 
-% Cost func 
 J = (-log(h.')*y - log(ones(1, m) - h.')*(ones(m, 1) - y)) / m +(lambda/(2*m)) * sum(theta(2:end).^2);
 
-% Gradient 
 grad(1) = (X(:, 1).' * (h - y)) /m;
 grad(2:end) = (X(:, 2:end).' * (h - y)) /m + (lambda/m) * theta(2:end); 
 

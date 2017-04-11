@@ -53,7 +53,7 @@ initial_theta = zeros(n + 1, 1);
 
 options = optimset('GradObj','on','MaxIter',50);
 
-for c = 1:num_labels %num_labels 为逻辑回归训练器的个数，num of logistic regression classifiers
+for c = 1:num_labels 
 all_theta(c, :) = fmincg(@(t)(lrCostFunction(t, X, (y == c),lambda)), initial_theta,options );
 end
 

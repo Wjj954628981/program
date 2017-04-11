@@ -27,8 +27,8 @@ m = size(X, 1);
          
 % You need to return the following variables correctly 
 J = 0;
-Theta1_grad = zeros(size(Theta1));
-Theta2_grad = zeros(size(Theta2));
+Theta1_grad = zeros(size(Theta1));% Theta1_grad is a 25*401 matrix
+Theta2_grad = zeros(size(Theta2));% Theta2_grad is a 10*26 matrix
 
 % ====================== YOUR CODE HERE ======================
 % Instructions: You should complete the code by working through the
@@ -38,6 +38,33 @@ Theta2_grad = zeros(size(Theta2));
 %         variable J. After implementing Part 1, you can verify that your
 %         cost function computation is correct by verifying the cost
 %         computed in ex4.m
+X = [ones(m,1) X]; %5000*401
+a_super2 = sigmoid(Theta1 * X'); % attention a_super2 is a 25*5000 matrix
+a_super2 = [ones(1,m);a_super2]; %add each bias unit for a_superscript2, 26 * 5000
+
+% attention a_super3 is a 10 * 5000 matrix, each column is a predict value
+a_super3 = sigmoid(Theta2 * a_super2);%10*5000
+
+a3 = 1 - a_super3;%10*5000
+
+%将5000条的结果label 向量y 转化成元素只为0或1 的矩阵Y
+Y = zeros(num_labels, m); %10*5000, each column is a label result
+for i = 1:num_labels
+    Y(i, y==i)=1;
+end
+
+Y1 = 1 - Y;
+res1 = 0;
+res2 = 0;
+for j = 1:m
+    %两个矩阵的每一列相乘,再把结果求和。预测值和结果label对应的元素相乘,就是某个输入x 的代价
+    tmp1 = sum( log(a_super3(:,j)) .* Y(:,j) ); 
+    res1 = res1 + tmp1; % m 列之和
+    tmp2 = sum( log(a3(:,j)) .* Y1(:,j) );
+    res2 = res2 + tmp2;
+end
+J = (-res1 - res2) / m;
+
 %
 % Part 2: Implement the backpropagation algorithm to compute the gradients
 %         Theta1_grad and Theta2_grad. You should return the partial derivatives of
@@ -54,6 +81,28 @@ Theta2_grad = zeros(size(Theta2));
 %               over the training examples if you are implementing it for the 
 %               first time.
 %
+
+for i = 1:m
+    a1 = X(i, :)'; %the i th input variables, 400*1
+    z2 = Theta1 *  a1;
+    a2 =  sigmoid( z2 ); % Theta1 * x superscript i
+    a2 = [ 1; a2 ];% add bias unit, a2's size is 26 * 1
+    z3 = Theta2 * a2;
+    a3 = sigmoid( z3 ); % h_theta(x)
+    
+    error_3 = a3 - Y( :, i ); % last layer's error, 10*1
+    %error_2 = ( Theta2' * error_3 ) .*  ( a2 .* (1 - a2) );% g'(z2)=g(z2)*(1-g(z2)), 26*1
+    
+    err_2 =  Theta2' * error_3; % 26*1
+    error_2 = ( err_2(2:end) ) .*  sigmoidGradient(z2);% 去掉 bias unit 对应的 error units
+    
+    Theta2_grad = Theta2_grad + error_3 * a2';
+    Theta1_grad = Theta1_grad + error_2 * a1';
+end
+
+Theta2_grad = Theta2_grad / m; % video 9-2 backpropagation algorithm the 11 th minute
+Theta1_grad = Theta1_grad / m;
+
 % Part 3: Implement regularization with the cost function and gradients.
 %
 %         Hint: You can implement this around the code for
@@ -62,30 +111,22 @@ Theta2_grad = zeros(size(Theta2));
 %               and Theta2_grad from Part 2.
 %
 
+% reg for cost function J,  ex4.pdf page 6 
+Theta1_tmp = Theta1(:, 2:end).^2;
+Theta2_tmp = Theta2(:, 2:end).^2;
+reg = lambda / (2*m) * ( sum( Theta1_tmp(:) ) + sum( Theta2_tmp(:) ) );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+J = (-res1 - res2) / m + reg;
 % -------------------------------------------------------------
 
+% reg for bp, ex4.pdf materials page 11
+Theta1(:,1) = 0;
+Theta2(:,1) = 0;
+
+Theta1_grad = Theta1_grad + lambda / m * Theta1;
+Theta2_grad = Theta2_grad + lambda / m * Theta2;
 % =========================================================================
 
 % Unroll gradients
 grad = [Theta1_grad(:) ; Theta2_grad(:)];
-
-
 end

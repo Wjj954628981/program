@@ -1,0 +1,5 @@
+D:\资料-作业\企业应用开发\linq调研\Linq\Linq\bin\Debug\Linq.exe.config
+D:\资料-作业\企业应用开发\linq调研\Linq\Linq\bin\Debug\Linq.exe
+D:\资料-作业\企业应用开发\linq调研\Linq\Linq\bin\Debug\Linq.pdb
+D:\资料-作业\企业应用开发\linq调研\Linq\Linq\obj\Debug\Linq.exe
+D:\资料-作业\企业应用开发\linq调研\Linq\Linq\obj\Debug\Linq.pdb
