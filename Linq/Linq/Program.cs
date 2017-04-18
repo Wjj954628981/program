@@ -21,7 +21,6 @@ namespace Linq
             City Shanghai = new City() { city_name = "Shanghai", Population = 3000 };
             City Hangzhou = new City() { city_name = "Hangzhou", Population = 4000 };
             City[] citys = { Tianjin, Beijing, Shanghai, Hangzhou };
-
             //查詢語法
             var percentileQuery =
                 from city in citys

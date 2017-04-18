@@ -6,3 +6,6 @@ D:\资料-作业\企业应用开发\linq调研\Linq\Linq\obj\Debug\Linq.pdb
 D:\Program\Linq\Linq\bin\Debug\Linq.exe.config
 D:\Program\Linq\Linq\obj\Debug\Linq.exe
 D:\Program\Linq\Linq\obj\Debug\Linq.pdb
+D:\Program\Linq\Linq\bin\Debug\Linq.exe
+D:\Program\Linq\Linq\bin\Debug\Linq.pdb
+D:\Program\Linq\Linq\obj\Debug\Linq.csprojResolveAssemblyReference.cache
