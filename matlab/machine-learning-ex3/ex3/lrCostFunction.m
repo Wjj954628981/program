@@ -38,8 +38,9 @@ grad = zeros(size(theta));
 
 h = sigmoid(X * theta); 
 
-J = (-log(h.')*y - log(ones(1, m) - h.')*(ones(m, 1) - y)) / m +(lambda/(2*m)) * sum(theta(2:end).^2);
+J = (-log(h.')*y - log(ones(1, m) - h.')*(ones(m, 1) - y)) / m +(lambda/(2*m)) * sum(theta(2:end).^2); %costfunction
 
+%分类求导
 grad(1) = (X(:, 1).' * (h - y)) /m;
 grad(2:end) = (X(:, 2:end).' * (h - y)) /m + (lambda/m) * theta(2:end); 
 

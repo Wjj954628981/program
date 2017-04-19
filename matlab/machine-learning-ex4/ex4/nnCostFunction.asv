@@ -115,7 +115,7 @@ Theta1_grad = Theta1_grad / m;
 %               and Theta2_grad from Part 2.
 %
 
-%costfunction正则化，第6页 
+% reg for cost function J,  ex4.pdf page 6 
 Theta1_tmp = Theta1(:, 2:end).^2;
 Theta2_tmp = Theta2(:, 2:end).^2;
 reg = lambda / (2*m) * ( sum( Theta1_tmp(:) ) + sum( Theta2_tmp(:) ) );
@@ -123,7 +123,7 @@ reg = lambda / (2*m) * ( sum( Theta1_tmp(:) ) + sum( Theta2_tmp(:) ) );
 J = (-res1 - res2) / m + reg;
 % -------------------------------------------------------------
 
-%bp正则化，第11页
+% reg for bp, ex4.pdf materials page 11
 Theta1(:,1) = 0;
 Theta2(:,1) = 0;
 

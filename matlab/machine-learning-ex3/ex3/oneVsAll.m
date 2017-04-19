@@ -49,7 +49,7 @@ X = [ones(m, 1) X];
 %                 initial_theta, options);
 %
 
-initial_theta = zeros(n + 1, 1);
+initial_theta = zeros(n + 1, 1); %10*400Matrix
 
 options = optimset('GradObj','on','MaxIter',50);
 
