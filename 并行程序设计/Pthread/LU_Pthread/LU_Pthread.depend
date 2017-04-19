@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1490858177 source:c:\users\lenovo\desktop\lu_pthread\test.c
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+
+1492514787 source:d:\资料-作业\并行程序设计\作业\lu_pthread\module2.c
+	<windows.h>
+	<intrin.h>
+	<stdio.h>
+	<stdlib.h>
+	<pthread.h>
+	<time.h>
+
+1492599572 source:d:\资料-作业\并行程序设计\作业\pthread\lu_pthread\lu_pthread.c
+	<windows.h>
+	<stdio.h>
+	<pthread.h>
+	<time.h>
+

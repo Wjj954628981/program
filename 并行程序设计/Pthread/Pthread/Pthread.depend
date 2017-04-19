@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1492600143 source:d:\资料-作业\并行程序设计\作业\pthread\lu_pthread\function.c
+	<windows.h>
+	<stdio.h>
+	<pthread.h>
+	"parm.h"
+	"function.h"
+
+1492599111 d:\资料-作业\并行程序设计\作业\pthread\lu_pthread\parm.h
+
+1492599274 d:\资料-作业\并行程序设计\作业\pthread\lu_pthread\function.h
+
+1492606719 source:d:\资料-作业\并行程序设计\作业\pthread\pthread\function.c
+	<windows.h>
+	<stdio.h>
+	<pthread.h>
+	"parm.h"
+	"function.h"
+
+1492599111 d:\资料-作业\并行程序设计\作业\pthread\pthread\parm.h
+
+1492603013 d:\资料-作业\并行程序设计\作业\pthread\pthread\function.h
+
+1492603052 source:d:\资料-作业\并行程序设计\作业\pthread\pthread\main.c
+	<windows.h>
+	<stdio.h>
+	<time.h>
+	"function.h"
+
